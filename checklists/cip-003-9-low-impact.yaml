@@ -1,0 +1,56 @@
+# CIP-003-9 low impact: Attachment 1 sections as a checklist.
+# Plain-language paraphrase for planning; the standard text at nerc.com is authoritative.
+standard: CIP-003-9
+applies_to: assets containing low impact BES Cyber Systems (identified under CIP-002-5.1a)
+program:
+  - id: R1.2
+    item: Documented cyber security policies for low impact assets covering the six Attachment 1 topics
+    cadence: reviewed and approved by the CIP Senior Manager at least once every 15 calendar months
+  - id: R2
+    item: One or more documented cyber security plans that include the sections of Attachment 1
+  - id: R3
+    item: A CIP Senior Manager identified by name, changes documented within 30 calendar days
+  - id: R4
+    item: Delegations of the CIP Senior Manager's authority documented, if any
+sections:
+  - section: 1
+    title: Cyber security awareness
+    check:
+      - Security awareness reinforced at least once every 15 calendar months
+    evidence: [dates, content, method of delivery]
+  - section: 2
+    title: Physical security controls
+    check:
+      - Physical access controlled to the asset or locations of the low impact BES Cyber Systems
+      - Physical access controlled to the Cyber Assets that provide the Section 3 electronic access controls
+    evidence: [access lists, locks or badge records, site description]
+  - section: 3
+    title: Electronic access controls
+    check:
+      - Routable communication between a low impact BES Cyber System and anything outside the asset is permitted only where necessary, inbound and outbound
+      - Dial-up connectivity authenticated, where present
+    evidence: [firewall or access-control configuration, rule list with reasons, rule reviews]
+  - section: 4
+    title: Cyber Security Incident response
+    check:
+      - Identification, classification and response to Cyber Security Incidents
+      - Determination of Reportable Cyber Security Incidents and notification to the E-ISAC (and CISA in the U.S.)
+      - Roles and responsibilities
+      - Incident handling (containment, eradication, recovery)
+      - Plan tested at least once every 36 calendar months
+      - Plan updated within 180 days after a Reportable Cyber Security Incident or a test
+    evidence: [plan, test records, update records]
+  - section: 5
+    title: Transient Cyber Assets and Removable Media malicious code risk mitigation
+    check:
+      - Mitigation for entity-managed Transient Cyber Assets
+      - Review of controls for vendor- or contractor-managed Transient Cyber Assets
+      - Malicious code detection and mitigation for Removable Media before use
+    evidence: [procedure, scan records]
+  - section: 6
+    title: Vendor electronic remote access security controls
+    check:
+      - Method to determine vendor electronic remote access
+      - Method to disable vendor electronic remote access
+      - Method to detect known or suspected malicious communications for vendor electronic remote access
+    evidence: [vendor-access log, configuration showing how access is enabled and disabled]

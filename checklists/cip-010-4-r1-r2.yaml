@@ -1,0 +1,30 @@
+# CIP-010-4 configuration change management (R1) and monitoring (R2) as a checklist.
+# Plain-language paraphrase for planning; the standard text at nerc.com is authoritative.
+standard: CIP-010-4
+applies_to: high and medium impact BES Cyber Systems and their associated EACMS, PACS and PCA (see each part's applicability)
+R1:
+  "1.1":
+    item: Baseline configuration, individually or by group
+    includes:
+      "1.1.1": Operating system or firmware, where no independent operating system exists
+      "1.1.2": Commercially available or open-source application software intentionally installed
+      "1.1.3": Custom software installed
+      "1.1.4": Logical network accessible ports
+      "1.1.5": Security patches applied
+  "1.2": Authorize and document changes that deviate from the existing baseline
+  "1.3": Update the baseline within 30 calendar days of completing a change that deviates from it
+  "1.4":
+    item: For a change that deviates from the baseline
+    steps:
+      - Before the change, determine the CIP-005 and CIP-007 security controls that could be impacted
+      - After the change, verify those controls are not adversely affected
+      - Document the results of the verification
+  "1.5": High impact only - test changes in a test environment (or production, minimizing impact) before implementing, and document the results
+R2:
+  "2.1": High impact only - monitor at least once every 35 calendar days for changes to the baseline, document and investigate detected unauthorized changes
+evidence_per_asset:
+  - baseline record with date
+  - change tickets showing authorization
+  - date the baseline was updated after each change
+  - verification records for affected CIP-005 and CIP-007 controls
+  - monitoring records (high impact)
